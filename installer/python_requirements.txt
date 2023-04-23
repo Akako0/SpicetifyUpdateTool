@@ -1,0 +1,5 @@
+tk
+datetime
+requests
+pywin32
+pypiwin32
