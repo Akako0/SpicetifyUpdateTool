@@ -1,8 +1,8 @@
 @echo off
 
-for /f "tokens=1,2 delims==" %%a in (./Spicetify/update.conf) do set %%a=%%b
+for /f "tokens=1,2 delims==" %%a in (update.conf) do set %%a=%%b
 
-python ./Spicetify/update.py check_for_update
+python update.py check_for_update
 
 if %ERRORLEVEL% equ 1 (
     timeout /t 2 /nobreak >nul
