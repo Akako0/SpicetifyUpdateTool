@@ -19,13 +19,11 @@ def check_for_update():
         key, value = line.split("=", 1)
         if key == "UPDATE_ELAPSE":
             update_elapse = int(value)
-            
 
     for line in cache.splitlines():
         key, value = line.split("=", 1)
         if key == "LAST_UPDATE":
             last_update = value
-
 
     last_update = datetime.datetime.strptime(last_update, "%m-%d-%Y")
     last_update = last_update.strftime("%m-%d-%Y")
